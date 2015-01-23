@@ -13,6 +13,7 @@ RUN docker-php-ext-install \
     mbstring \
     mcrypt \
     mysqli \
+    pdo \
     pdo_mysql \
 
 
