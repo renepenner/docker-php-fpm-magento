@@ -6,9 +6,9 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-configure \
-    gd --with-png-dir=/usr --with-jpeg-dir=/usr 
-
-RUN docker-php-ext-install \
+    gd --with-png-dir=/usr --with-jpeg-dir=/usr && \
+    \
+    docker-php-ext-install \
     gd \
     mbstring \
     mcrypt \
