@@ -2,7 +2,13 @@ FROM php:5.6-fpm
 MAINTAINER René Penner <rene@penner.name>
 
 RUN apt-get update && \
-    apt-get install -y libpng12-dev libjpeg-dev libmcrypt-dev && \
+    apt-get install -y \
+        libpng12-dev \
+        libjpeg-dev \
+        libmcrypt-dev \
+        libxml2-dev \
+        freetype* \
+        && \
     rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-configure \
